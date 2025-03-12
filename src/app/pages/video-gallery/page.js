@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { videoList } from './videoData';
-import ProfViewer from '../components/profViewer';
+import ProfViewer from '../../components/profViewer';
 
 export default function Gallery(){
   const [index, setIndex] = useState(0);

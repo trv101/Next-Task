@@ -5,7 +5,7 @@ export default function WhoWeAre(){
         <div className="who-we-are">
         <h2>Who We Are</h2> 
         <p> We are a company committed to excellence and delivering top services.</p>
-        <Link href ="/video-gallery">Check-out the Video Gallery</Link> 
+        <Link href ="/pages/video-gallery">Check-out the Video Gallery</Link> 
         </div>
     );
 }
