@@ -11,7 +11,7 @@
     z-index: 100;
 }
 
-/* Remove underline from links */
+
 a {
     text-decoration: none;
 }
@@ -58,7 +58,7 @@ a {
 }
 
 /* Fix hover underline only for navbar links, NOT buttons */
-.navbar a:not(.login-button):not(.logout-button)::before {
+.navbar a:not(.login-button):not(.logout-button):not(.user-button)::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -69,10 +69,30 @@ a {
     transition: 0.3s;
 }
 
-.navbar a:not(.login-button):not(.logout-button):hover::before {
+.navbar a:not(.login-button):not(.logout-button):not(.user-button):hover::before {
     width: 100%;
 }
 
 .navbar a.active {
     color: #f70ff7;
 }
+
+.user-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  .user-icon {
+    font-size: 40px;  /* ✅ Adjust icon size */
+    color: white; /* ✅ Change color */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .user-icon:hover {
+    color:purple ; /* ✅ Hover effect */
+  }
+  

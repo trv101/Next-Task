@@ -9,7 +9,7 @@ export default function Footer() {
                 {/* 🔹 Company Info Section */}
                 <div className="footer-column">
                     <h3>NEXEN Tyres</h3>
-                    <p>Providing quality tyres and professional vehicle services since 1995.</p>
+                    <p>Providing quality tyres and professional <br></br>vehicle services since 1995.</p>
                 </div>
 
                 {/* 🔹 Quick Links Section */}
@@ -19,15 +19,16 @@ export default function Footer() {
                         <li><a href="/">Home</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="/pages/contact">Contact</a>
+                        </li>
                     </ul>
                 </div>
 
                 {/* 🔹 Contact Section */}
                 <div className="footer-column">
                     <h3>Contact Us</h3>
-                    <p><FaMapMarkerAlt /> 123 Tyre Street, London, UK</p>
-                    <p><FaPhone /> +44 123 456 789</p>
+                    <p><FaMapMarkerAlt /> 778 Oxward Street, London, UK</p>
+                    <p><FaPhone /> +44 865 221 578</p>
                     <p><FaEnvelope /> support@nexentyres.com</p>
                 </div>
 

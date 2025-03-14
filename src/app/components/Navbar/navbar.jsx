@@ -2,6 +2,7 @@
 import "./navbar.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { FaUserCircle } from "react-icons/fa"
 
 export default function Navbar() {
     const router = useRouter();
@@ -36,9 +37,14 @@ export default function Navbar() {
               <span className="logo">NEXEN</span>
             <nav className="navbar">
                 <a href="/">Home</a>
-                <a href="#about">About</a>
                 <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+                <a href="/pages/contact">Contact</a>
+
+
+                <a href="/pages/home" className="user-button">
+                    <FaUserCircle className="user-icon" /> {/* 🔹 User Circle Icon */}
+                </a>
 
                 {/* ✅ Show Login if user is NOT logged in */}
                 {!isLoggedIn ? (

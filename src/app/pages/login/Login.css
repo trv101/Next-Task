@@ -9,8 +9,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: purple;
+    
+   
     
 }
 
@@ -61,9 +61,11 @@ form .input-box{
     padding: 20px 45px 20px 20px ;
 }
 
-.input-boxinput::placeholder{
-    color: white;
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
+
 
 .input-box .icon{
     position: absolute;
@@ -136,11 +138,12 @@ form .register-link{
 /* ✅ Make sure login page is centered properly */
 .login-container {
     margin-top: 200px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 80vh; /* Ensures enough space for the footer */
+    min-height: 70vh; /* Ensures enough space for the footer */
     width: 100%;
 }
 
@@ -165,7 +168,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: purple;
+    
 }
 
 /* ✅ Make sure footer stays at the bottom */

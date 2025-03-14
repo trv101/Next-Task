@@ -31,18 +31,18 @@ export default function Login() {
             const data = await response.json();
 
             if (!response.ok) {
-                toast.error(data.message || "Login failed. Please try again."); 
+                toast.error(data.message || "Login failed. Please try again.");
                 return;
             }
 
             localStorage.setItem("token", data.token);
             localStorage.setItem("user", JSON.stringify(data.user));
 
-            toast.success("Login successful! Redirecting..."); 
-
+            toast.success("Login successful! Redirecting...");
             setTimeout(() => {
-                router.push("/pages/home"); 
-            }, 2000);
+                window.location.href = "/pages/home"; // ✅ Instantly redirects & refreshes
+            }, 500);
+            
         } catch (err) {
             console.error("Error during login:", err);
             toast.error("Something went wrong. Please try again.");
@@ -51,7 +51,7 @@ export default function Login() {
 
     return (
         <div className="login-container">
-            <Toaster position="top-right" reverseOrder={false} /> 
+            <Toaster position="top-right" reverseOrder={false} />
             
             <div className="wrapper">
                 <div className="form-box login">

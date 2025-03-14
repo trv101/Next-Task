@@ -1,54 +1,69 @@
+/* ✅ Ensure Profile Page Fills the Screen Properly */
+.profile-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding-top: 100px; /* ✅ Pushes content below navbar */
+}
 
+/* ✅ Profile Form */
 .profile {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-top: 200px;
 }
 
+/* ✅ Profile Title */
 .profile h2 {
     font-size: 24px;
     color: #333;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
+/* ✅ Form Inputs */
 .profile input {
-    width: 90%;
-    padding: 10px;
-    margin: 8px 0;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     outline: none;
-    transition: 0.3s;
+    transition: border 0.3s ease-in-out;
 }
 
+/* ✅ Input Focus Effect */
 .profile input:focus {
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
 }
 
+/* ✅ Update Button */
 .profile button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background: purple;
     border: none;
     color: white;
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
-    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+    margin-top: 15px;
 }
 
 .profile button:hover {
     background: rgb(90, 3, 90);
 }
 
+/* ✅ Success/Error Messages */
 .success-message {
     color: green;
     font-size: 14px;
@@ -61,6 +76,7 @@
     margin-top: 10px;
 }
 
+/* ✅ Toast Notifications */
 .Toastify__toast {
     font-size: 16px;
     border-radius: 6px;
@@ -72,4 +88,11 @@
 
 .Toastify__toast--error {
     background-color: #dc3545;
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 600px) {
+    .profile {
+        max-width: 90%;
+    }
 }

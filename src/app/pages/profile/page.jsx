@@ -1,8 +1,8 @@
 "use client";
-import './Profile.css'
+import './Profile.css';
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import toast, { Toaster } from "react-hot-toast"; // 🔹 Import Toast
+import toast, { Toaster } from "react-hot-toast"; 
 
 export default function Profile() {
     const router = useRouter();
@@ -49,7 +49,7 @@ export default function Profile() {
 
             const data = await response.json();
             if (response.status === 200) {
-                toast.success("Profile updated successfully!"); // 🔹 Show Toast Notification
+                toast.success("Profile updated successfully!"); 
             } else {
                 toast.error("Update failed: " + data.message);
             }
@@ -59,35 +59,37 @@ export default function Profile() {
     };
 
     return (
-        <div className="profile">
-            <Toaster position="top-right" reverseOrder={false} /> {/* 🔹 Toast container */}
+        <div className="profile-container">
+            <Toaster position="top-right" reverseOrder={false} />
 
-            <h2>Edit Profile</h2>
-            <input 
-                type="text" 
-                placeholder="First Name" 
-                value={user.firstName} 
-                onChange={(e) => setUser({ ...user, firstName: e.target.value })} 
-            />
-            <input 
-                type="text" 
-                placeholder="Last Name" 
-                value={user.lastName} 
-                onChange={(e) => setUser({ ...user, lastName: e.target.value })} 
-            />
-            <input 
-                type="text" 
-                placeholder="Username" 
-                value={user.username} 
-                onChange={(e) => setUser({ ...user, username: e.target.value })} 
-            />
-            <input 
-                type="email" 
-                placeholder="Email" 
-                value={user.email} 
-                onChange={(e) => setUser({ ...user, email: e.target.value })} 
-            />
-            <button onClick={handleUpdate}>Update Profile</button>
+            <div className="profile">
+                <h2>Edit Profile</h2>
+                <input 
+                    type="text" 
+                    placeholder="First Name" 
+                    value={user.firstName} 
+                    onChange={(e) => setUser({ ...user, firstName: e.target.value })} 
+                />
+                <input 
+                    type="text" 
+                    placeholder="Last Name" 
+                    value={user.lastName} 
+                    onChange={(e) => setUser({ ...user, lastName: e.target.value })} 
+                />
+                <input 
+                    type="text" 
+                    placeholder="Username" 
+                    value={user.username} 
+                    onChange={(e) => setUser({ ...user, username: e.target.value })} 
+                />
+                <input 
+                    type="email" 
+                    placeholder="Email" 
+                    value={user.email} 
+                    onChange={(e) => setUser({ ...user, email: e.target.value })} 
+                />
+                <button onClick={handleUpdate}>Update Profile</button>
+            </div>
         </div>
     );
 }

@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 80px; /* Adjust for navbar space */
+    padding-top: 100px; /* ✅ Adjusted for navbar */
 }
 
 /* ✅ Header Section (Welcome Message + Edit Profile) */
@@ -14,48 +14,49 @@
     width: 90%;
     max-width: 1200px;
     display: flex;
-    justify-content: space-between; /* ✅ Ensures alignment */
+    justify-content: space-between; /* ✅ Align Welcome & Edit Button */
     align-items: center;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 50px;
+    margin-bottom: 90px; /* ✅ Reduced spacing */
 }
 
 /* ✅ Welcome Message (Left Side) */
 .welcome-message {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 26px;
+    font-weight: 600;
     color: #333;
 }
 
-/* ✅ Edit Profile Button (Right Side) */
+/* ✅ Edit Profile Button */
 .edit-profile-btn {
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: #007bff;
+    background-color: purple;
     color: white;
     border: none;
-    padding: 10px 15px;
-    font-size: 14px;
+    padding: 10px 20px;
+    font-size: 15px;
     font-weight: bold;
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
 }
 
 .edit-profile-btn:hover {
-    background-color: #0056b3;
+    background-color:rgb(82, 27, 82);
+    transform: scale(1.05);
 }
 
-/* ✅ Card Container - Stacks Cards Vertically */
+/* ✅ Card Container */
 .card-container {
-    display: flex;
-    flex-direction: column; /* ✅ Stack cards vertically */
-    
+    display: grid;
+    grid-template-columns: 1fr; /* ✅ Single column by default */
     gap: 20px;
     width: 90%;
-    max-width: 600px;
-    margin-bottom: 40px;
+    max-width: 800px;
+    margin-bottom: 50px;
 }
 
 /* ✅ Card Styling */
@@ -63,7 +64,7 @@
     background: white;
     padding: 20px;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease-in-out;
@@ -73,14 +74,16 @@
     transform: scale(1.05);
 }
 
-/* ✅ Responsive */
+/* ✅ Responsive - Two Column Layout for Larger Screens */
+
+
 @media (max-width: 768px) {
     .header-section {
         flex-direction: column;
         text-align: center;
         gap: 10px;
     }
-
+    
     .card-container {
         width: 100%;
     }

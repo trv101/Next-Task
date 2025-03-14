@@ -26,7 +26,7 @@ export default function Home() {
 
     return (
         <div className="home-container">
-            {/* ✅ Welcome Message */}
+            {/* ✅ Header Section - Welcome Message & Edit Profile */}
             {user && (
                 <div className="header-section">
                     <h2 className="welcome-message">Welcome, {user.username}!</h2>
@@ -36,7 +36,7 @@ export default function Home() {
                 </div>
             )}
 
-            {/* ✅ Stacked Cards (Vertical Layout) */}
+            {/* ✅ Card Container - Services & Options */}
             <div className="card-container">
                 <div className="card">
                     <h3>📅 Book an Appointment</h3>

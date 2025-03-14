@@ -5,17 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    min-height: 100vh; /* ✅ Ensures page fills the viewport */
-}
-
-/* ✅ Fix footer width & padding */
-.page-container > .footer {
-    width: 100%;
-    align-self: stretch; /* ✅ Prevents centering */
-    margin: 0;
-    padding: 40px 5%; /* ✅ Adds inner padding inside footer */
-    background-color: black;
-    color: white;
+    min-height: 100vh; /* Ensures page fills the viewport */
 }
 
 /* ✅ Full-width banner image but only covers a section */
@@ -30,29 +20,38 @@
     color: white;
     font-size: 2rem;
     font-weight: bold;
-    margin-top: 85px;
+    margin-top: 80px; /* ✅ Fixes overlap issue with Navbar */
 }
 
 /* ✅ General section styling */
 .section {
-    width: 80%;
+    width: 100%;
     max-width: 1200px;
     padding: 50px 20px;
     text-align: center;
 }
 
-/* ✅ Add some spacing between sections */
+/* ✅ Spacing between sections */
 .who-we-are,
 .services,
 .about-us {
     background: white;
+   
     margin: 20px 0;
     padding: 50px;
     border-radius: 10px;
 }
 
+/* ✅ Prevent Footer from inheriting unwanted styles */
+.footer {
+    width: 100%;
+    padding: 40px 5%;
+    background-color: black;
+    color: white;
+}
+
 /* ✅ Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: px) {
     .section {
         width: 95%;
         padding: 30px;
@@ -62,3 +61,4 @@
         font-size: 1.5rem;
     }
 }
+

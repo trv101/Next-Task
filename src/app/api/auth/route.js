@@ -22,8 +22,8 @@ export async function POST(req) {
 
             const hashedPassword = await bcrypt.hash(password, 10);
             await db.query(
-                "INSERT INTO users (firstName, lastName, username, email, password) VALUES (?, ?, ?, ?, ?)",
-                [firstName, lastName, username, email, hashedPassword]
+                "INSERT INTO users (username, email, password) VALUES ( ?, ?, ?)",
+                [username, email, hashedPassword]
             );
 
             return NextResponse.json({ message: "User registered successfully" }, { status: 201 });
