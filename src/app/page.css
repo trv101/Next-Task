@@ -1,0 +1,64 @@
+/* ✅ Ensure full-page layout */
+.page-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh; /* ✅ Ensures page fills the viewport */
+}
+
+/* ✅ Fix footer width & padding */
+.page-container > .footer {
+    width: 100%;
+    align-self: stretch; /* ✅ Prevents centering */
+    margin: 0;
+    padding: 40px 5%; /* ✅ Adds inner padding inside footer */
+    background-color: black;
+    color: white;
+}
+
+/* ✅ Full-width banner image but only covers a section */
+.landing-hero {
+    width: 100%;
+    height: 60vh; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 85px;
+}
+
+/* ✅ General section styling */
+.section {
+    width: 80%;
+    max-width: 1200px;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* ✅ Add some spacing between sections */
+.who-we-are,
+.services,
+.about-us {
+    background: white;
+    margin: 20px 0;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 768px) {
+    .section {
+        width: 95%;
+        padding: 30px;
+    }
+    .landing-hero {
+        height: 50vh;
+        font-size: 1.5rem;
+    }
+}

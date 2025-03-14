@@ -10,7 +10,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: rgba(14, 19, 2, 0.274);
+    background-color: purple;
     
 }
 
@@ -124,4 +124,59 @@ form .register-link{
 
 .register-link p a:hover{
     text-decoration: underline;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ✅ Make sure login page is centered properly */
+.login-container {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Ensures enough space for the footer */
+    width: 100%;
+}
+
+/* ✅ Wrapper to contain the login form */
+.wrapper {
+    position: relative;
+    width: 420px;
+    height: 450px;
+    background: #07070786;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* ✅ Fix layout issues */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: purple;
+}
+
+/* ✅ Make sure footer stays at the bottom */
+.footer {
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 30px 5%;
+    text-align: left;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: auto; /* ✅ Pushes the footer to the bottom */
 }

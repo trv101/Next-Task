@@ -1,0 +1,78 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Remove underline from links */
+a {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 32px;
+    color: #f70ff7;
+    font-weight: 700;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+/* Ensure both login and logout buttons are styled the same */
+.login-button,
+.logout-button {
+    background-color: #f70ff7 !important;
+    color: black !important;
+    padding: 8px 20px !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    border-radius: 50px !important;
+    display: inline-block; /* ✅ Ensures same positioning */
+    border: none; /* ✅ Remove default button border */
+    cursor: pointer; /* ✅ Ensure clickable */
+    font-size: 16px;
+}
+
+.login-button:hover,
+.logout-button:hover {
+    background-color: purple !important;
+    color: black !important;
+}
+
+/* Fix hover underline only for navbar links, NOT buttons */
+.navbar a:not(.login-button):not(.logout-button)::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+.navbar a:not(.login-button):not(.logout-button):hover::before {
+    width: 100%;
+}
+
+.navbar a.active {
+    color: #f70ff7;
+}

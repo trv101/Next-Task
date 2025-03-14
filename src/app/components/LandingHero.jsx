@@ -1,23 +1,13 @@
 "use client";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
 
-export default function LandingHero({bgImage}){
-    const router = useRouter();
+import "./LandingHero.css"; // ✅ Import the updated CSS
 
-    const handleLogout = () => {
-        router.push("/pages/login"); };
-    return(
-        <div className="landing-hero">
-            <h1>Welcome to Nexen!</h1>
-            <div className="home">
-                <button onClick={handleLogout}>Signup / Login</button>
-            </div>
-        
-            <Link href="/pages/LoginRegister"></Link>
-            <img className="bgImage"
-            src= {bgImage}
-            alt= "background-banner"/>
+export default function LandingHero({ bgImage }) {
+ 
+
+    return (
+        <div className="landing-hero" style={{ backgroundImage: `url(${bgImage})` }}>
+            
         </div>
     );
 }

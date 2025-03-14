@@ -1,0 +1,31 @@
+/* ✅ Ensure full width and limited height */
+.landing-hero {
+    width: 100%;
+    height: 60vh; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+   
+}
+
+/* ✅ Make sure text is readable */
+.landing-hero h1 {
+    background: rgba(0, 0, 0, 0.5); /* Adds slight transparency for contrast */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 768px) {
+    .landing-hero {
+        height: 50vh;
+        font-size: 1.5rem;
+    }
+}

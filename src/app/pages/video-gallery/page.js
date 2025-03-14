@@ -1,4 +1,5 @@
 "use client";
+import "./Gallery.css";
 import { useState } from 'react';
 import { videoList } from './videoData';
 import ProfViewer from '../../components/profViewer';
