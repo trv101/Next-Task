@@ -80,7 +80,7 @@ export async function GET(req) {
 
         const decoded = jwt.verify(token, JWT_SECRET);
         const db = await connectToDatabase();
-        const [rows] = await db.query("SELECT id, firstName, lastName, username, email FROM users WHERE id = ?", [decoded.id]);
+        const [rows] = await db.query("SELECT id, firstName, lastName, username, email, Age FROM users WHERE id = ?", [decoded.id]);
 
         if (rows.length === 0) {
             return NextResponse.json({ message: "User not found" }, { status: 404 });
@@ -98,7 +98,7 @@ export async function GET(req) {
  */
 export async function PUT(req) {
     try {
-        const { token, firstName, lastName, username, email } = await req.json();
+        const { token, firstName, lastName, username, email, Age } = await req.json();
         
         if (!token) {
             console.error("❌ No token provided"); // Debugging
@@ -111,8 +111,8 @@ export async function PUT(req) {
         const db = await connectToDatabase();
 
         const [result] = await db.query(
-            "UPDATE users SET firstName = ?, lastName = ?, username = ?, email = ? WHERE id = ?",
-            [firstName, lastName, username, email, decoded.id]
+            "UPDATE users SET firstName = ?, lastName = ?, username = ?, email = ?, Age=? WHERE id = ?",
+            [firstName, lastName, username, email, Age, decoded.id]
         );
 
         if (result.affectedRows === 0) {

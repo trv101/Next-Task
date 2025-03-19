@@ -9,6 +9,7 @@ export default function Profile() {
     const [user, setUser] = useState({
         firstName: "",
         lastName: "",
+        Age:"",
         username: "",
         email: "",
     });
@@ -75,6 +76,12 @@ export default function Profile() {
                     placeholder="Last Name" 
                     value={user.lastName} 
                     onChange={(e) => setUser({ ...user, lastName: e.target.value })} 
+                />
+                <input 
+                    type="text" 
+                    placeholder="Age" 
+                    value={user.Age} 
+                    onChange={(e) => setUser({ ...user, Age: e.target.value })} 
                 />
                 <input 
                     type="text" 
